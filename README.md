@@ -36,11 +36,13 @@ cd [your-project-directory]
 
 
 
+
 2. Set Up Your Environment
 Create a Python virtual environment to manage project dependencies in an isolated space. This is a best practice to avoid conflicts with your system's Python.
 
 python3 -m venv venv
 source venv/bin/activate
+
 
 
 
@@ -50,6 +52,7 @@ You should see (venv) appear in your Terminal prompt, indicating the virtual env
 With the virtual environment active, install all the required Python libraries using the provided requirements.txt file.
 
 pip install -r requirements.txt
+
 
 
 
@@ -64,10 +67,12 @@ ollama pull llama3.2
 
 
 
+
 5. Start Ollama Server
 The Ollama server must be running to handle requests from the Flask application.
 
 ollama serve
+
 
 
 
@@ -81,10 +86,12 @@ Install Homebrew (if you don't have it):
 /bin/bash -c "$(curl -fsSL [https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh](https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh))"
 
 
+
 Install MongoDB Community Edition:
 
 brew tap mongodb/brew
 brew install mongodb-community
+
 
 
 Start the MongoDB service:
@@ -92,19 +99,27 @@ Start the MongoDB service:
 brew services start mongodb-community
 
 
+
 Verify the service is running:
 
 brew services list
 
 
+
 You should see mongodb-community listed with a started status. The default connection string is mongodb://localhost:27017/.
 
-ChromaDB: This is pre-configured to run as a lightweight, in-memory database by default, so no additional setup is required beyond the pip install from the dependencies step. For a persistent database, you would configure a client with a specific directory path, but for this project, the default in-memory behavior is sufficient.
+ChromaDB: This is pre-configured to run as a lightweight, in-memory database by default, so no additional setup is required beyond the pip install from the dependencies step. For a persistent database, you can run it as a server in a separate process.
 
-7. Run the Application
+7. Run ChromaDB
+If you want to run ChromaDB in a persistent, client-server mode for more robust, long-term use, you can run it locally with a specified path. This will ensure your data is saved to disk and not lost when the application terminates.
+
+**chroma run --path ./MM_CHROMA_DB --host 0.0.0.0 --port 8000**
+
+8. Run the Application
 Start the Flask application from your Terminal to launch the chatbot.
 
 python app.py  # or the name of your main application file
+
 
 
 
