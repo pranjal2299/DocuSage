@@ -1,0 +1,30 @@
+# Core LLM / RAG dependencies
+ollama
+chromadb
+langchain
+langchain-community
+sentence-transformers
+
+# For PDF, text & image handling
+pypdf
+pdfplumber
+Pillow
+pytesseract
+
+# Web API / Backend
+flask
+flask-cors
+requests
+
+# Data handling
+pandas
+numpy
+
+# Optional: Streamlit UI
+streamlit
+
+# For environment/config management
+python-dotenv
+
+# If you use MongoDB for storing docs/chat
+pymongo
