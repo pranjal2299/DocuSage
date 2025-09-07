@@ -5,7 +5,7 @@ A contextual PDF ChatBot enabling intelligent, natural language queries on your 
 
 # How to Run this
 
-NexusDocs: A Contextual PDF ChatBot
+A Contextual PDF ChatBot
 This project is a sophisticated, end-to-end Contextual PDF ChatBot designed for intelligent, document-aware conversations. It allows users to upload various documents, including PDFs and images, and interact with them through natural language queries. The system goes beyond simple keyword searches, providing answers grounded in the specific content of the uploaded files.
 
 The entire architecture forms a robust Retrieval-Augmented Generation (RAG) pipeline. This enables the chatbot to first fetch relevant information from the documents and then use that context to generate a precise, informed response. The result is a highly effective, secure, and intelligent system for navigating complex information within your own files.
